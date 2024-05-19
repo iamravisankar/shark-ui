@@ -8,22 +8,22 @@ export const menus: Navigation[] = [
     icon: 'icon-navigation',
     children: [
       {
-        id: 'Dashboard',
-        title: 'Dashboard',
+        id: 'Users',
+        title: 'Users',
         type: 'collapse',
         icon: '#custom-status-up',
         children: [
           {
             id: 'default',
-            title: 'Default',
+            title: 'View Users',
             type: 'item',
-            url: '/dashboard/default'
+            url: '/users/list'
           },
           {
-            id: 'analytics',
-            title: 'Analytics',
+            id: 'adduser',
+            title: 'Add user',
             type: 'item',
-            url: '/dashboard/analytics'
+            url: '/users/add'
           }
         ]
       },

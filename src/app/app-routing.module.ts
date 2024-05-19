@@ -7,6 +7,10 @@ import { AdminComponent } from './demo/layout/admin';
 import { EmptyComponent } from './demo/layout/empty/empty.component';
 import { GuestComponent } from './demo/layout/front/guest.component';
 import { AuthGuard } from './@theme/helpers/auth.guard';
+import { SharkHomeComponent } from './demo/shark-pages/shark-home/shark-home.component';
+import { ViewUsersComponent } from './demo/shark-pages/view-users/view-users.component';
+import { AddUserComponent } from './demo/shark-pages/add-user/add-user.component';
+import { EditUserComponent } from './demo/shark-pages/edit-user/edit-user.component';
 
 const routes: Routes = [
   {
@@ -39,6 +43,22 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () => import('./demo/pages/dashboard/dashboard.module').then((m) => m.DashboardModule)
+      },
+      {
+        path: 'home',
+        component: SharkHomeComponent
+      },
+       {
+        path: 'users/list',
+        component: ViewUsersComponent
+      },
+       {
+        path: 'users/add',
+        component: AddUserComponent
+      },
+      {
+        path: 'users/edit/:user',
+        component: EditUserComponent
       },
       {
         path: 'dashboard',
